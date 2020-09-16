@@ -11,6 +11,7 @@ export class AdminComponent implements OnInit {
   constructor(private bikeService: BikeService) { }
 
   ngOnInit(): void {
+    this.getBikes();
   }
 // tslint:disable-next-line:typedef
 getBikes(){
@@ -19,5 +20,5 @@ getBikes(){
       err => console.error(err),
       () => console.log('bikes loaded')
     );
-}
+  }
 }

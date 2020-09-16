@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type: "application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json'})
 };
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BikeService {
 
-  constructor(private Http: HttpClient) { }
-
-  // tslint:disable-next-line:typedef
+  constructor(private http: HttpClient) { }
   getBikes() {
-    return this.Http.get('/server/api/v1/bikes');
+    return this.http.get('/server/api/v1/bikes');
+  }
+
+  getBike(id: number) {
+    return this.http.get('/server/api/v1/bikes' + id);
+  }
+
+  createBikeRegistration(bike){
+    let body = JSON.stringify(bike);
+    return this.http.post('/server/api/v1/bikes', body, httpOptions);
   }
 }
