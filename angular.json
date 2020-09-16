@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bike-ui"
+    }
+  },
+  "defaultProject": "bike-ui",
+  "cli": {
+    "analytics": false
+  }
 }
