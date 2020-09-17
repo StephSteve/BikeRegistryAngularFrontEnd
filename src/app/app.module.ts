@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './components/admin/admin.component';
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [BikeService],
   bootstrap: [AppComponent]
