@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BikeService} from '../../services/bike.service';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-registration',
