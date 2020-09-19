@@ -11,11 +11,12 @@ import {Observable} from 'rxjs';
 export class HomeComponent implements OnInit {
 models: string [] = [
   'Globo MTB 29 Full Suspension',
-  'Globo Carbon Fiber RAce SEries',
+  'Globo Carbon Fiber Race Series',
   'Globo Time Trial Blade',
 ];
 bikeform: FormGroup;
 validMessage: string = "";
+
 
   constructor(private bikeService: BikeService) { }
 
@@ -34,7 +35,7 @@ validMessage: string = "";
 
   submitRegistration() {
     if (this.bikeform.valid) {
-      this.validMessage = "Your bike registration has been submitted. Thank you!";
+      this.validMessage = 'Your bike registration has been submitted. Thank you!';
       this.bikeService.createBikeRegistration(this.bikeform.value).subscribe(
         data => {
           this.bikeform.reset();
@@ -45,7 +46,7 @@ validMessage: string = "";
         }
       )
     } else {
-      this.validMessage = "Please fill out the form before submitting!";
+      this.validMessage = 'Please fill out the form before submitting!';
     }
   }
 }
