@@ -10,9 +10,9 @@ import {Observable} from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 models: string [] = [
-  'Globo MTB 29 Full Suspension',
-  'Globo Carbon Fiber Race Series',
-  'Globo Time Trial Blade',
+  'SSteve MTB 29 Full Suspension',
+  'SSteve Carbon Fiber Race Series',
+  'SSteve Time Trial Blade',
 ];
 bikeform: FormGroup;
 validMessage: string = "";
